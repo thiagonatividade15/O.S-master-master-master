@@ -1,11 +1,11 @@
 .footer {
-    width: 85vw;
+    width: 99.60vw;
     position: relative;
     bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    background-color: rgba(143, 188, 143, 0.425);
 }
 
 * {

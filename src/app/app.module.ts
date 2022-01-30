@@ -7,7 +7,7 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { MenuComponent } from './pagina-inicial/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './pagina-inicial/header/header.component';
-import { PesquisarComponent } from './pagina-inicial/pesquisar/pesquisar.component';
+import { PesquisarComponent } from './pesquisar/pesquisar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pagina-inicial/home/home.component';
 

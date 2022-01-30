@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './form-os.component.html',
   styleUrls: ['./form-os.component.css']
 })
-export class FormOSComponent{
+
+export class FormOSComponent  {
 
 
 

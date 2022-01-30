@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import { PesquisarComponent } from './pagina-inicial/pesquisar/pesquisar.component';
+import { PesquisarComponent } from './pesquisar/pesquisar.component';
 import { NgModule } from '@angular/core';
 import { FormOSComponent } from './form-os/form-os.component';
 import { HomeComponent } from './pagina-inicial/home/home.component';

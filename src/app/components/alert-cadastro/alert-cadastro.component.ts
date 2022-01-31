@@ -1,4 +1,4 @@
-import { MensagemFormulario } from './../../helpers/mensagem-formulario';
+import { MensagemFormulario } from '../../store/helpers/mensagem-formulario';
 import { Component, ChangeDetectionStrategy, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
@@ -10,7 +10,6 @@ import { Component, ChangeDetectionStrategy, Output, EventEmitter, Input } from 
                [dismissible]="dismissible"
                [dismissOnTimeout]="dismissOnTimeout"
                (onClose)="onClose()">
-
           {{ dadosMensagem.mensagem }}
         </alert>
       </div>
@@ -30,7 +29,7 @@ export class AlertCadastroComponent {
 
   @Input()
     dadosMensagem: MensagemFormulario;
-    
+
   @Output()
     close = new EventEmitter<void>();
 

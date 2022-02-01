@@ -1,4 +1,4 @@
-export interface Colaborador {
+export interface OrdemService {
   id: number;
   cliente: string;
   servico: string;

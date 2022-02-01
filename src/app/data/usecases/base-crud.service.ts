@@ -2,9 +2,9 @@ import { tap, catchError } from 'rxjs/operators';
 import { Observable, defer, of } from 'rxjs';
 
 import { Repository } from './../protocols/repository';
-import { FormularioStatusBuilders } from './../../helpers/formulario-status-builder';
-import { BaseEntityStore } from './../../helpers/base-entity.store';
-import { FormularioStatus } from './../../helpers/formulario-status';
+import { FormularioStatusBuilders } from '../../store/helpers/formulario-status-builder';
+import { BaseEntityStore } from '../../store/helpers/base-entity.store';
+import { FormularioStatus } from '../../store/helpers/formulario-status';
 
 export abstract class BaseCrudService<EntidadeInput, Entidade>
   implements Repository<EntidadeInput, Entidade> {
@@ -54,11 +54,11 @@ export abstract class BaseCrudService<EntidadeInput, Entidade>
         this.store.entidades = entidades;
       }));
   }
-  
+
   update(entidade: EntidadeInput): Observable<Entidade> {
     throw new Error('Method not implemented.');
   }
-  
+
   getFormularioStatus(): FormularioStatus {
     return this.store.formularioStatus;
   }

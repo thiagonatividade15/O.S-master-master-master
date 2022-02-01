@@ -9,7 +9,7 @@ import { BaseRepository } from './base.repository';
   providedIn: 'root'
 })
 export class OrdemServiceRepository extends BaseRepository<OrdemServiceInput, OrdemService> {
-  protected readonly url = `${environment.api}colaboradores`;
+  protected readonly url = `${environment.api}ordemservices`;
 
 
 }

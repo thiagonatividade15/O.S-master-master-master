@@ -1,28 +1,44 @@
 body {
     font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    height: 200px;
-    width: 180px;
+  }
+  
+  .sidenav {
+    height: 70%;
+    width: 0;
     position: fixed;
     z-index: 1;
-    bottom: 100px;
     top: 0;
     left: 0;
-    background-color:#000000;
+    background-color:#2F4F4F;
     overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 10px 4px 7px 20px;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: inset 0 0 1em rgb(10, 10, 10);
+    border-radius: 15px;
+  }
+  
+  .sidenav a {
+    padding: 10px 10px 10px 30px;
     text-decoration: none;
     font-size: 15px;
-    color: #818181;
+    color: #000000;
     display: block;
-}
-
-.sidenav a:hover {
-    color: aliceblue;
-}
+    transition: 0.1s;
+  }
+  
+  .sidenav a:hover {
+    color: #e4e4e42f;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 20px;}
+  }

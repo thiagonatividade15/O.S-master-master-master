@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
 
 export interface HttpPost {
-  post(url, body): Observable<any>;
+  post(url: string, body: any): Observable<any>;
 }

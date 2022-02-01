@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import {  Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { ConstruirFormulario } from './protocols/construir-formulario';
 import { ValidacaoFormulario } from './../validacaoform/validacao-formulario';
+
 
 @Injectable()
 
@@ -16,7 +17,7 @@ export class FormularioCadastroOrdemService implements ConstruirFormulario {
       laboratorio: [null, [Validators.required, Validators.maxLength(20)]],
       equipamento: [null, [Validators.required, Validators.maxLength(45)]],
       observacao: [null, [Validators.maxLength(200)]],
-       prazo  : [null, [Validators.required, ValidacaoFormulario.data]],
+      prazo  : [null, [Validators.required, ValidacaoFormulario.data]],
       status: [null, [Validators.required]],
       prioridade: [null, [Validators.required]],
       proposta: [null, [Validators.maxLength(100)]]

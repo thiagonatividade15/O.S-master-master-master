@@ -13,7 +13,7 @@ import { Component, ChangeDetectionStrategy, Output, EventEmitter, Input } from 
           {{ dadosMensagem.mensagem }}
         </alert>
       </div>
-    </div>
+   
   `,
   styles: [`
     .centralizar-tela {

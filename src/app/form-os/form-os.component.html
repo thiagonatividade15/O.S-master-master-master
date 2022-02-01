@@ -1,18 +1,18 @@
+<app-menu></app-menu>
 <div class="container">
-    
     <div class="row">
         <div class="col-sm">
-            <app-menu></app-menu>
+            <app-menu ></app-menu>
         </div>
         <div class="col-sm-11">
             <div class="card ">
                 <div class="card-body">
                     <h2 style="margin-bottom: 30px; margin-left: 320px; font-size: 25px;">Gerar ordem de Serviço</h2>
-                    <form>
+                    <form [formGroup]="formulario">
                         <div class="form-group row">
                             <label for="cliente" class="col-sm-2 col-form-label"><b>*Cliente</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='cliente'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Um</option>
                                         </select>
@@ -21,7 +21,7 @@
                         <div class="form-group row">
                             <label for="servico" class="col-sm-2 col-form-label"><b>*Serviço</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='servico'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Um</option>
                                         </select>
@@ -30,7 +30,7 @@
                         <div class="form-group row">
                             <label for="laboratorio" class="col-sm-2 col-form-label"><b>*Laboratório</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='laboratorio'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Um</option>
                                         </select>
@@ -39,7 +39,7 @@
                         <div class="form-group row">
                             <label for="equipamento" class="col-sm-2 col-form-label"><b>*Equipamento</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='equipamento'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Um</option>
                                         </select>
@@ -48,19 +48,19 @@
                         <div class="form-group row">
                             <label for="observacao" class="col-sm-2 col-form-label"><b>Observação</b></label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" formControlName='observacao' rows="3"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="prazo" class="col-sm-2 col-form-label"><b>*Prazo</b></label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" name="data_nascimento">
+                                <input type="date" class="form-control" formControlName='prazo'>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="status" class="col-sm-2 col-form-label"><b>Status</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='status'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Aberta</option>
                                             <option value="1">Em andamento</option>
@@ -72,7 +72,7 @@
                         <div class="form-group row">
                             <label for="status" class="col-sm-2 col-form-label"><b>Prioridade</b></label>
                             <div class="col-sm-9">
-                                <select class="custom-select">
+                                <select class="form-control" formControlName='prioridade'>
                                             <option selected>Selecione uma opção</option>
                                             <option value="1">Baixa</option>
                                             <option value="1">Média</option>
@@ -83,11 +83,13 @@
                         <div class="form-group row">
                             <label for="proposta" class="col-sm-2 col-form-label"><b>Proposta</b></label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control">
+                                <input class="form-control" formControlName='proposta'>
                             </div>
                         </div>
                     </form>
-                    <button type="button" class="btn btn-success" style="margin-left: 370px; margin-top: 30px;">Criar ordem de serviço</button>
+                    <button type="button" style="margin-left: 370px; margin-top: 30px;"
+                    (click)="onCadastrar()"
+                    >Criar ordem de serviço</button>
                 </div>
             </div>
         </div>

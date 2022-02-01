@@ -9,7 +9,6 @@ import { OrdemServiceService } from './../data/usecases/OrdemService.Service';
 import { tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
-
 @Component({
   templateUrl: './form-os.component.html',
   styleUrls: ['./form-os.component.css'],
@@ -17,6 +16,7 @@ import { Subject } from 'rxjs';
 })
 
 export class FormOSComponent implements OnInit {
+
    formulario: FormGroup;
 
   constructor(
